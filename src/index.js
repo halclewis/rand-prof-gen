@@ -2,7 +2,7 @@ import Chance from 'chance';
 import moment from 'moment';
 import uniqueRandomArray from 'unique-random-array';
 import allNames from '../data/names.json';
-import allAddresses from '../data/addresses.json';  
+import allAddresses from '../data/addresses.json';
 import allMaleNames from '../data/maleNames.json';
 import allFemaleNames from '../data/femaleNames.json';
 
@@ -30,8 +30,8 @@ function profile(gender) {
     let fullName = name(gender);
     let profileGender = chance.gender();
     let bDay = moment(chance.birthday());
-    let today = moment(new Date()); 
-    
+    let today = moment(new Date());
+
     if (!gender) {
         profileGender = chance.gender();
     } else if (gender.toUpperCase() === 'MALE') {
@@ -40,7 +40,7 @@ function profile(gender) {
         profileGender = 'Female';
     }
 
-    profile.id = chance.guid();    
+    profile.id = chance.guid();
     profile.fullName = fullName;
     profile.firstName = fullName.split(' ')[0];
     profile.lastName = fullName.split(' ')[1];
@@ -57,7 +57,7 @@ function profile(gender) {
     profile.email = chance.email();
     profile.twitter = chance.twitter();
     profile.ssn = chance.ssn();
-    
+
     return profile;
 }
 

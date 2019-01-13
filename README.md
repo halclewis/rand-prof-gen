@@ -1,15 +1,4 @@
-# Random Profile Generator
-[![NPM](https://nodei.co/npm/random-profile-generator.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/random-profile-generator/)
-
-[![Travis](https://img.shields.io/travis/kasunkv/random-profile-generator.svg)](https://travis-ci.org/kasunkv/random-profile-generator)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/b17825fea7e5493e89e69cb6df485c54)](https://www.codacy.com/app/kvkrusl/random-profile-generator?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=kasunkv/random-profile-generator&amp;utm_campaign=Badge_Grade)
-[![Codecov](https://img.shields.io/codecov/c/github/kasunkv/random-profile-generator.svg)](https://codecov.io/gh/kasunkv/random-profile-generator)
-[![npm](https://img.shields.io/npm/v/random-profile-generator.svg)](https://www.npmjs.com/package/random-profile-generator)
-[![npm](https://img.shields.io/npm/l/random-profile-generator.svg)](https://opensource.org/licenses/MIT)
-[![npm](https://img.shields.io/npm/dm/random-profile-generator.svg)](https://www.npmjs.com/package/random-profile-generator)
-[![npm](https://img.shields.io/npm/dt/random-profile-generator.svg)](https://www.npmjs.com/package/random-profile-generator)
-[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
-
+# Random Profile Generator [DEMO]
 
 Generates a random user profile with all the common user profile items such as name, address, profile image etc. 
 You can generate a complete profile or a generate individual profile properties such as name or address.
@@ -274,15 +263,6 @@ console.log(guid);
 // => b0443ec8-4a00-55aa-8f74-6af0b6c26e17
 ```
 
-# Contributing
-All contributions from the GitHub community are welcome.
-
-* Fork the repository
-* Create a feature branch: `git checkout -b new-feature`
-* Commit your changes: `npm run commit` (Uses Commitizen Conventional Changelog for commits)
-* Push to the branch: `git push origin new-feature`
-* Submit a Pull Request
-
 ## Installing Dependencies
 
 ```sh
@@ -295,44 +275,6 @@ $ npm install
 ```sh
 # Run mocha tests with -w flag
 $ npm run test:local
-```
-
-## Code Coverage
-
-[Istanbul](https://istanbul.js.org/) is used for code coverage analisys. [nyc](https://github.com/istanbuljs/nyc) command-line client is used to support ES6 with babel as the transpiler.
-To run unit tests with code coverage report, use the following command.
-
-```sh
-# Unit tests with code coverage
-$ npm run cover
-```
-
-## Code Quality
-
-[Codacy](https://www.codacy.com) is configured on Github for code quality analisys.
-
-## Git Commit Guidelines
-
-A strict commit guidelines are followed so that its easy to do release with semantic versioning. [Semantic Release](https://github.com/semantic-release/semantic-release) package is used to do this. [Commitizen](https://www.npmjs.com/package/commitizen) is used with [Commitizen Conventional Changelog](https://www.npmjs.com/package/cz-conventional-changelog) to add proper commit messages. Git hooks  created using [ghooks](https://www.npmjs.com/package/ghooks) are inplace to enforce the commit format used in the project.
-Each commit message consists of a header, a body and a footer. The header has a special format that includes a type, a scope and a subject. The commit message format is bellow.
-
-```
-<type>(<scope>): <subject>
-<BLANK LINE>
-<body>
-<BLANK LINE>
-<footer>
-```
-
-Header is mandatory and the scope is optional, But its encouraged to add a scope. Footer is also optional.
-To perform a commit follow these steps
-
-```sh
-# Add the files you want to commit
-$ git add <FILES_TO_COMMIT>
-
-# Use the configured ghook
-$ npm run commit
 ```
 
 # Credits
