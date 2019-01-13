@@ -1,5 +1,5 @@
 {
-  "name": "rand-prof-gen",
+  "name": "rand-prof-gen-1",
   "version": "0.0.0",
   "description": "Generates a random user profile with all the common user profile items such as name, address, profile image etc.",
   "main": "dist/index.js",

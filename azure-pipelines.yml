@@ -3,6 +3,8 @@
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
+name: 1.1.$(Rev:r)
+
 trigger:
 - master
 
@@ -15,8 +17,39 @@ steps:
     versionSpec: '8.x'
   displayName: 'Install Node.js'
 
-- script: |
-    npm install
-    npm run build
-    npm test
-  displayName: 'npm install, build and test'
+- task: Npm@1
+  displayName: 'npm install'
+  inputs:
+    verbose: false
+
+
+- task: kasunkodagoda.regex-match-replace.regex-match-replace.RegExMatchReplace@2
+  displayName: 'Set Version'
+  inputs:
+    PathToFile: package.json
+    RegEx: '"version": "0.0.0",'
+    ValueToReplace: '"version": "$(Build.BuildNumber)",'
+
+
+- task: Npm@1
+  displayName: 'npm run build'
+  inputs:
+    command: custom
+    verbose: false
+    customCommand: 'run build'
+
+
+- task: Npm@1
+  displayName: 'npm test'
+  inputs:
+    command: custom
+    verbose: false
+    customCommand: test
+
+
+- task: Npm@1
+  displayName: 'npm publish'
+  inputs:
+    command: publish
+    verbose: true
+    publishEndpoint: 'Public NPM Registry'
