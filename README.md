@@ -292,4 +292,3 @@ Random Profile Generator uses some 3rd party packages and APIs for its developme
 # License
 MIT © [Kasun Kodagoda](http://kasunkodagoda.k2vsoftware.com)
 
-
