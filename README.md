@@ -3,6 +3,8 @@
 Generates a random user profile with all the common user profile items such as name, address, profile image etc. 
 You can generate a complete profile or a generate individual profile properties such as name or address.
 
+[![Build Status](https://kasunkdemos.visualstudio.com/rand-prof-gen/_apis/build/status/halclewis.rand-prof-gen?branchName=master)](https://kasunkdemos.visualstudio.com/rand-prof-gen/_build/latest?definitionId=25?branchName=master)
+
 ## Install
 
 Install the package using `npm`
@@ -289,3 +291,5 @@ Random Profile Generator uses some 3rd party packages and APIs for its developme
 
 # License
 MIT © [Kasun Kodagoda](http://kasunkodagoda.k2vsoftware.com)
+
+
