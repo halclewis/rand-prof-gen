@@ -78,7 +78,7 @@ function phone() {
 }
 
 function email() {
-    return chance.email();
+    return chance.phone();
 }
 
 function twitter() {
